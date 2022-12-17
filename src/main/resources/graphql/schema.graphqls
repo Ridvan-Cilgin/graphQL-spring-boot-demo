@@ -1,0 +1,23 @@
+type Query {
+    findAll: [Book]
+    findById(id: ID): Book
+}
+
+type Book {
+    id: ID!
+    title: String
+    author: String
+    pages: Int
+    price: Float
+}
+
+input BookRequest {
+    title: String
+    author: String
+    pages: Int
+    price: Float
+}
+
+type Mutation {
+    createBook(bookRequest: BookRequest): Book
+}

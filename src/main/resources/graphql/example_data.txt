@@ -1,0 +1,39 @@
+mutation {
+  createBook(
+    bookRequest: {title: "Suç ve Ceza", author: "Dosto", pages: 687, price: 10.34}
+  ) {
+    id
+    title
+    author
+  }
+}
+
+mutation {
+  createBook(
+    bookRequest: {title: "Savaş ve Barış", author: "Tolsttoy", pages: 1687, price: 101.34}
+  ) {
+    id
+    title
+    author
+  }
+}
+
+
+
+{
+  findAll {
+    id
+    title
+    author
+    pages
+  }
+}
+
+query {
+  findById(id:1) {
+    id
+    title
+    author
+    pages
+  }
+}
